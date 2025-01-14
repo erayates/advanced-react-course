@@ -20,3 +20,6 @@ This pattern will allow sorting elements in columns with customizable spaces bet
 Patterns For Spacing: Grid Pattern
 Elements in columns
 This pattern will allow building grid lists with customizable spaces between items
+
+Sorting Elements Inline: Inline Pattern
+This pattern will allows sorting a set of elements inline on the direct axis with customizable gaps.
