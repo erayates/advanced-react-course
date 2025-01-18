@@ -45,3 +45,33 @@ function App(){
 }
 ```
 
+Defining Types for Children:
+
+```
+type CardProps = {color?: "crimson" | "blue" | "brown"};
+const Card = ({children, color = "blue"}: PropsWithChildren<CardProps>) => {
+  return (
+    <section>
+      {children}
+    </section>
+  )
+}
+```
+
+Extending Props with Helpers:
+
+```
+import { ComponentPropsWithoutRef } from "react";
+type ButtonProps = ComponentPropsWithoutRef<'button'>;
+
+const Button = ({children, onClick, type}: ButtonProps) => {
+  return <button onClick={onClick} type={type}>{children}</button>
+}
+```
+
+Empty object as type
+```
+const Component = (props: {data: Record<string, never>}) => {
+return <div />;
+}
+```
